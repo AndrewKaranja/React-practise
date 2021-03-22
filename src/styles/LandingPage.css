@@ -1,0 +1,14 @@
+.GetStarted{
+    color: rgb(245, 250, 252);
+    position: relative;
+    margin-bottom: 32px;
+    min-height: 300px;
+   
+    padding: 10rem 10rem 5rem 2rem;
+    box-sizing: border-box;
+    background-size: cover;
+    background-color: #424242;
+    background-image: url('../wallpaper04.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
