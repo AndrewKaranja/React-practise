@@ -76,7 +76,7 @@ const ContactContainer=()=>{
 ReactDOM.render(
   <React.StrictMode>
     <LandingPage/>
-    <Body/>
+  
   </React.StrictMode>,
   document.getElementById('root')
 );

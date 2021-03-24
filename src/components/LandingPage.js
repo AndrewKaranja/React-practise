@@ -45,8 +45,11 @@ paperContainer: {
     backgroundImage: `url(${wallpaper})`
 },
 LandingImg: {
-maxWidth:60,
-maxHeight:40,
+height:30,
+width:30,
+},
+description:{
+    color:"#ffffff"
 }
 }));
 
@@ -75,17 +78,14 @@ function LandingPage(){
            <div className="GetStarted">
            <Grid container spacing={3}>
                <Grid item xs={12} sm={6}>
-                   <Grid sm={12}><Typography  variant="h5">Welcome to Tukio</Typography></Grid>
-                   <Grid sm={12}><Typography variant="h6" className={classes.title}>
+                   <Grid sm={12}><Typography  variant="h4"  className={classes.description}>Welcome to Tukio</Typography></Grid>
+                   <Grid sm={12} ><Typography variant="h6">
                         {landingText}
                     </Typography></Grid>
-                   <Grid sm={12}><Button variant="contained">Get Started</Button></Grid>
+                   <Grid sm={12}><Button variant="outlined">Get Started</Button></Grid>
                   
-                  
-                    
-                  
-               </Grid>
-               <Grid item xs={12} sm={6}>
+                </Grid>
+               <Grid container xs={12} sm={6} alignItems="center" justify="center" >
                   <img src={landingImg} classname={classes.LandingImg} alt="monsterartist" />
                </Grid>
            </Grid>
