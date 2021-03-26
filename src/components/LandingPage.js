@@ -91,7 +91,7 @@ function LandingPage(){
                     <Typography variant="h6" className={classes.title}>
                         {title}
                     </Typography>
-                    <Button variant="outlined"  color="inherit"  className={classes.authButton}>Login</Button>
+                    <Button variant="outlined"  color="inherit"  className={classes.authButton} onClick={handleClick}>Login</Button>
                     <Button variant="contained"  color="primary"  className={classes.authButton}>Register</Button>
                 </Toolbar>
             </AppBar>

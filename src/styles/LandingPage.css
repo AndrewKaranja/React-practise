@@ -1,18 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Montserrat:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.LandingPage{
+    height: 100%;
+    width: 100%;
+}
 .GetStarted{
-    color: rgb(0, 0, 0);
-    position: relative;
     
-    min-height: 300px;
+    position: relative;
+    min-width: 0;
    
     padding: 8rem 2rem 5rem 2rem;
-    box-sizing: border-box;
+   
     background-size: cover;
-    background-color: #f9a826e5;
+    background-color: #f4a261;
     
     background-repeat: no-repeat;
     background-position: center;
 }
-
+#Description{
+    font-family: 'Kiwi Maru', serif;
+    color:"#ffffff";
+    margin-bottom: 10rem;
+}
 .LandingImg{
     text-align: center;
     height: 100px;
