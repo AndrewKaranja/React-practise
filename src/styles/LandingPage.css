@@ -11,6 +11,9 @@
     
     position: relative;
     min-width: 0;
+    width:100vw;
+    height:88vh;
+    justify-self: center;
    
     padding: 8rem 2rem 5rem 2rem;
    

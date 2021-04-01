@@ -44,6 +44,7 @@ nav:{
     flexGrow:1,
     backgroundImage:  `url(${ankara})`,
     color:'#fff',
+    height:'100%',
     padding:theme.spacing(1),
 },
 menuLogo:{
@@ -98,14 +99,14 @@ function LandingPage(){
         </ThemeProvider>
             
       
-        <Grid container className="GetStarted" height='100%'> 
+        <Grid container className="GetStarted" height='100vh'> 
                 <Grid item xs={12} sm={6}>
                    <Grid sm={12}>
                        <Typography  variant="h4"  className={classes.description} >
                            Welcome to Tukio
                         </Typography>
                     </Grid>
-                    <Grid sm={12} >
+                    <Grid  sm={12} >
                        <Typography variant="h6" style={{marginBottom:10}}>
                         {landingText}
                        </Typography>
