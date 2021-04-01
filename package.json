@@ -9,14 +9,17 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "bootstrap": "^4.6.0",
     "firebase": "^8.3.2",
+    "formik": "^2.2.6",
     "react": "^17.0.1",
     "react-awesome-qr": "^1.1.0",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
     "react-to-pdf": "0.0.13",
     "react-to-print": "^2.12.3",
-    "web-vitals": "^1.1.1"
+    "web-vitals": "^1.1.1",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",

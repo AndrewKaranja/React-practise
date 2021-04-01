@@ -9,6 +9,8 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 
+import {useField,Formik,Form} from 'formik'
+
 
 const useStyles=makeStyles((theme)=>({
     Root:{
@@ -20,6 +22,16 @@ const useStyles=makeStyles((theme)=>({
     }
     }));
 
+const TextField=({label,...props})=>{
+    const[field,meta]=useField(props);
+    return(
+        <div>
+            <label htmlFor={field.name}>{label}</label>
+            <input className="form-control shadow-none" autoComplete="off"></input>
+        </div>
+    )
+}
+
 const SignupPage = () => {
     const classes=useStyles();
     return (
@@ -27,16 +39,30 @@ const SignupPage = () => {
             <Paper className={classes.Root}>
               <Grid className={classes.MainGrid}>
                   <Grid>
-                      <Typography>
-                          Get started
-                      </Typography>
-                      <Typography>
-                          already have an account?
-                      </Typography>
-                      <a>Sign in</a>
+                      <Formik
+                      initialValues={{
+                          fname:'',
+                          lname:'',
+                          username:'',
+                          email:'',
+                          password:'',
+                          confirmPassword:''
+
+                      }}>
+                          {formik=>(
+                              <div>
+                                  <h1 className="GetStarted">Get Started</h1>
+                                  <Form>
+                                      <TextField label="First Name" name="fname" type="text"/>
+
+                                  </Form>
+
+                              </div>
+                          )}
+
+                      </Formik>
                   </Grid>
                   <Grid>
-                      <img></img>
                   </Grid>
 
 
