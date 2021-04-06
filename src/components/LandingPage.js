@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/LandingPage.css';
 import {makeStyles} from '@material-ui/core/styles'
+import {BrowserRouter as Router , Switch ,Route} from 'react-router-dom';
 
 import logo from '../qrimage.png';
 import ankara from '../ankarapattern.png';
