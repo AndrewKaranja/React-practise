@@ -8,6 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
+import TextField from './TextField'
+import signupAnim from '../images/usersignup.gif'
 
 import {useField,Formik,Form} from 'formik'
 
@@ -15,30 +17,28 @@ import {useField,Formik,Form} from 'formik'
 const useStyles=makeStyles((theme)=>({
     Root:{
         backgroundColor:"#f4a261",
-        padding:theme.spacing(3),
+        height:'100vh',
+        padding:theme.spacing(5),
     },
     MainGrid:{
-        borderRadius:'100px',
+        borderRadius:'20px',
+        backgroundColor:'#fff',
+        minHeight:'80vh',
+        margin:theme.spacing(3),
+        padding:theme.spacing(3),
     }
     }));
 
-const TextField=({label,...props})=>{
-    const[field,meta]=useField(props);
-    return(
-        <div>
-            <label htmlFor={field.name}>{label}</label>
-            <input className="form-control shadow-none" autoComplete="off"></input>
-        </div>
-    )
-}
+
 
 const SignupPage = () => {
     const classes=useStyles();
     return (
         <div>
             <Paper className={classes.Root}>
-              <Grid className={classes.MainGrid}>
-                  <Grid>
+              <Grid className={classes.MainGrid}  container direction="row">
+                  <Grid item xs={12} sm={6}>
+                  
                       <Formik
                       initialValues={{
                           fname:'',
@@ -51,7 +51,7 @@ const SignupPage = () => {
                       }}>
                           {formik=>(
                               <div>
-                                  <h1 className="GetStarted">Get Started</h1>
+                                  <h1>Get Started</h1>
                                   <Form>
                                       <TextField label="First Name" name="fname" type="text"/>
 
@@ -62,8 +62,12 @@ const SignupPage = () => {
 
                       </Formik>
                   </Grid>
-                  <Grid>
+                  <Grid item xs={12} sm={6} justify="center"
+  alignItems="center">
+                 <img src={signupAnim} height="400px" width="400px" alt="signup" />
+
                   </Grid>
+                 
 
 
               </Grid>
