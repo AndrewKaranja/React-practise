@@ -54,6 +54,11 @@ const SignupPage = () => {
                                   <h1>Get Started</h1>
                                   <Form>
                                       <TextField label="First Name" name="fname" type="text"/>
+                                      <TextField label="Last Name" name="lname" type="text"/>
+                                      <TextField label="Username" name="username" type="text"/>
+                                      <TextField label="Email" name="email" type="text"/>
+                                      <TextField label="Password" name="passw" type="text"/>
+                                      <TextField label="Confirm Password" name="confirmpassw" type="text"/>
 
                                   </Form>
 
