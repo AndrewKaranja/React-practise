@@ -78,7 +78,7 @@ const SignupPage = () => {
                               </div>
                           )}
                           </Formik>
-                          <Button variant="contained"  color="primary"  className={classes.authButton}>Create Account</Button>
+                          <Button variant="contained"  color="primary"  className={classes.SignupButton}>Create Account</Button>
                   </Grid>
                   <Grid item xs={12} sm={6} justify="center"
   className="gridImgSignup" >
