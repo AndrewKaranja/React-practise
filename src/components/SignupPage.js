@@ -1,10 +1,8 @@
 import React from 'react';
 import '../styles/SignupPage.css';
 import {makeStyles} from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card' 
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+
+import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button'
@@ -59,8 +57,9 @@ const SignupPage = () => {
       <span className="buttonText">Google</span>
     </div>
   </div>
-<br/>
-<h6>-------OR-------</h6> 
+<br/> 
+
+<Divider variant="middle" />
                  
                       <Formik
                       initialValues={{
@@ -78,8 +77,8 @@ const SignupPage = () => {
                                       <TextField label="Full Name" name="fullname" type="text"/>
                                       <TextField label="Username" name="username" type="text"/>
                                       <TextField label="Email" name="email" type="text"/>
-                                      <TextField label="Password" name="passw" type="text"/>
-                                      <TextField label="Confirm Password" name="confirmpassw" type="text"/>
+                                      <TextField label="Password" name="passw" type="password"/>
+                                      <TextField label="Confirm Password" name="confirmpassw" type="password"/>
 
                                   </Form>
 
