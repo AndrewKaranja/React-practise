@@ -1,10 +1,8 @@
 import React from 'react'
 import '../styles/SignupPage.css';
 import {makeStyles} from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card' 
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+
+import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import GoogleLogo from '../images/google.png'
@@ -59,6 +57,9 @@ function LoginPage() {
     </div>
   </div>
                  
+  <br/> 
+
+<Divider variant="middle" />
                       <Formik
                       
                       initialValues={{
