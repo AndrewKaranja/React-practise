@@ -49,11 +49,22 @@ const SignupPage = () => {
             <Paper className={classes.Root}>
               <Grid className={classes.MainGrid}  container direction="row">
                   <Grid item xs={12} sm={6} className={classes.SignFormGrid}>
-                  
+                  <h1>Get Started</h1>
+                  <div id="gSignInWrapper">
+    <span className="label">Sign up with:</span>
+    <div id="customBtn" className="customGPlusSignIn">
+      <span className="icon">
+      
+      </span>
+      <span className="buttonText">Google</span>
+    </div>
+  </div>
+<br/>
+<h6>-------OR-------</h6> 
+                 
                       <Formik
                       initialValues={{
-                          fname:'',
-                          lname:'',
+                          fullname:'',
                           username:'',
                           email:'',
                           password:'',
@@ -62,10 +73,9 @@ const SignupPage = () => {
                       }}>
                           {formik=>(
                               <div>
-                                  <h1>Get Started</h1>
+                                  
                                   <Form>
-                                      <TextField label="First Name" name="fname" type="text"/>
-                                      <TextField label="Last Name" name="lname" type="text"/>
+                                      <TextField label="Full Name" name="fullname" type="text"/>
                                       <TextField label="Username" name="username" type="text"/>
                                       <TextField label="Email" name="email" type="text"/>
                                       <TextField label="Password" name="passw" type="text"/>
