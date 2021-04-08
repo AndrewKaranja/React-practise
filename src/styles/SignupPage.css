@@ -13,7 +13,7 @@
 
 }
 
-::before,::after{
+*,::before,::after{
   box-sizing: border-box;
 }
 
@@ -28,10 +28,14 @@
 .gridImgSignup{
     contain: content;
 }
-
+.form__div{
+  position: relative;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
 
 .form__input{
-  
+  position: absolute;
   top:0;
   left:0;
   width: 100%;
@@ -45,22 +49,22 @@
   z-index: 1;
 }
 .form__label{
-  
+  position: absolute;
   left: 1rem;
   top:1rem;
   padding:0.25rem;
   background-color:#fff;
   color: var(--input-color);
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
   transition: .3s;
 }
 
 /* input focus move up label */
 .form__input:focus+ .form__label{
-  top: -.5rem;
+  top: -1rem;
   left: .8rem;
   color: var(--first-color);
-  font-size:var(--small-font-size);
+  font-size:0.75rem;
   font-weight: 500;
   z-index: 10;
 
@@ -68,7 +72,7 @@
 
 /* input focus stick top label */
 .form__input:not(:placeholder-shown).form__input:not(:focus)+ .form__label{
-  top: -.5rem;
+  top: -.2rem;
   left: .8rem;
   
   font-size:var(--small-font-size);
