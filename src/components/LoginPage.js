@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import GoogleLogo from '../images/google.png'
 import Button from '@material-ui/core/Button'
 import { Typography } from '@material-ui/core';
 import TextField from './TextField'
@@ -47,7 +48,17 @@ function LoginPage() {
 <Paper className={classes.Root}>
               <Grid className={classes.MainGrid}  container direction="row">
                   <Grid item xs={12} sm={6} className={classes.LoginFormGrid}>
-                  
+                  <h1>Welcome Back</h1>
+                  <div id="gSignInWrapper">
+    <span className="label">Sign in with:</span>
+    <div id="customBtn" className="customGPlusSignIn">
+      <span className="icon">
+      
+      </span>
+      <span className="buttonText">Google</span>
+    </div>
+  </div>
+                 
                       <Formik
                       
                       initialValues={{
@@ -57,7 +68,7 @@ function LoginPage() {
                       }}>
                           {formik=>(
                               <div>
-                                  <h1>Welcome Back</h1>
+                                  
                                   <Form>
                                       <TextField label="Email" name="email" type="text"/>
                                       <TextField label="Password" name="passw" type="text"/>
