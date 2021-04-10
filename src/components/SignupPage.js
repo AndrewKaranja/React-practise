@@ -7,6 +7,9 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button'
 import { Typography } from '@material-ui/core';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Link from '@material-ui/core/Link';
 import TextField from './TextField'
 import signupAnim from '../images/usersignup.gif'
 
@@ -39,15 +42,37 @@ const useStyles=makeStyles((theme)=>({
     }));
 
 
+    const label = (
+        <Typography variant="caption">By Creating an account, you agree to our <Link href="#">
+      Privacy Policy
+  </Link>,<Link href="#">
+      Terms and Conditions
+  </Link> and <Link href="#">
+  Notifications Settings
+  </Link></Typography>
+      )
+
+
 
 const SignupPage = () => {
     const classes=useStyles();
+    const [state, setState] = React.useState({
+        checkedA: false,
+      });
+    
+      const handleChange = (event) => {
+        setState({ ...state, [event.target.name]: event.target.checked });
+      };
     return (
         <div>
             <Paper className={classes.Root}>
               <Grid className={classes.MainGrid}  container direction="row">
                   <Grid item xs={12} sm={6} className={classes.SignFormGrid}>
-                  <h1>Get Started</h1>
+                  <h2>Get Started</h2>
+                  <Typography variant="caption">Already have an account? <Link href="#">
+      Login
+  </Link></Typography>
+  
                   <div id="gSignInWrapper">
     <span className="label">Sign up with:</span>
     <div id="customBtn" className="customGPlusSignIn">
@@ -60,6 +85,7 @@ const SignupPage = () => {
 <br/> 
 
 <Divider variant="middle" />
+<br/> 
                  
                       <Formik
                       initialValues={{
@@ -87,15 +113,35 @@ const SignupPage = () => {
                               </div>
                           )}
                           </Formik>
-                          <Button variant="contained"  color="primary"  className={classes.SignupButton}>Create Account</Button>
+
+    
+         
                   </Grid>
                   <Grid item xs={12} sm={6} justify="center"
   className="gridImgSignup" >
                  <img src={signupAnim} height="400px" width="400px" alt="signup" className="imgSignup"/>
 
                   </Grid>
-                 
 
+                  <Grid item xs={12} sm={12}>
+                  <FormControlLabel
+        control={
+          <Checkbox
+            checked={state.checkedA}
+            onChange={handleChange}
+            name="checkedA"
+            color="primary"
+          />
+        }
+        label={label}
+      />
+                  </Grid>
+                  <Grid item xs={12} sm={12}>
+                  <Button variant="contained"  color="primary"  className={classes.SignupButton}>Create Account</Button>
+                  </Grid>
+                 
+                 
+  
 
               </Grid>
 
