@@ -1,0 +1,8 @@
+.error{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 2rem;
+    color: red;
+    font-size: .6rem;
+}
