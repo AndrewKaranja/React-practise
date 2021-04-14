@@ -16,6 +16,8 @@ import TextField from './TextField'
 import {ErrorMessage,useField,Formik,Form} from 'formik';
 import * as Yup from 'yup';
 
+import {useAuth} from '../contexts/AuthContext'
+
 
 
 
@@ -68,6 +70,10 @@ const CustomCheckbox=({children,...props})=> {
 
 
 const SignupPage = () => {
+//const {signup}=useAuth();
+
+
+
     const classes=useStyles();
 
 
@@ -133,6 +139,7 @@ const SignupPage = () => {
                                   resetForm();
                                   setSubmitting(false);
                               },3000)
+                              //signup(values.email,values.password)
                           }}
                           >
 
