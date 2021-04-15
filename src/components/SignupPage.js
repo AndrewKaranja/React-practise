@@ -70,7 +70,7 @@ const CustomCheckbox=({children,...props})=> {
 
 
 const SignupPage = () => {
-//const {signup}=useAuth();
+const {signup}=useAuth();
 
 
 
@@ -139,7 +139,7 @@ const SignupPage = () => {
                                   resetForm();
                                   setSubmitting(false);
                               },3000)
-                              //signup(values.email,values.password)
+                              signup(values.email,values.password)
                           }}
                           >
 
